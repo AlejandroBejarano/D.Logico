@@ -1,0 +1,86 @@
+// To use it in a project:
+//   - rename the used ports (in each line between quotation marks, "port") according to the top level signal names in the project
+//   - change .txt to .cst. This textfile is just a guide.
+////FPGA: GW1NR-LV9QN88PC6/I5
+
+
+//Clock
+IO_LOC  "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//Switches
+IO_LOC  "btn1" 3;
+IO_PORT "btn1" IO_TYPE=LVCMOS33;
+
+
+
+
+//LEDs
+IO_LOC  "led[0]" 10;
+IO_PORT "led[0]" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   //Led[0]
+
+IO_LOC  "led[1]" 11;
+IO_PORT "led[1]" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   //Led[1]
+
+IO_LOC  "led[2]" 13;
+IO_PORT "led[2]" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   //Led[2]
+
+IO_LOC  "led[3]" 14;
+IO_PORT "led[3]" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   //Led[3]
+
+
+
+
+//Header_physical_ports
+//DRIVE: current in mA (4, 8, 16 or 24), //PULL_MODE: ensure a known state for a signal (GND or VCC), //IO_TYPE: LVCMOS33/LVCMOS18 voltage (3.3 or 1.8)
+//Any header on the board can be used, in this section there are only those that are not used by the boards interfaces, for example, HDMI. To use any port you just have to follow the format.
+IO_LOC "codigo_gray_pi[3]" 25;
+IO_LOC "codigo_gray_pi[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;     //Gray[3]
+
+IO_LOC "codigo_gray_pi[2]" 26;
+IO_LOC "codigo_gray_pi[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;     //gray[2]
+
+IO_LOC "codigo_gray_pi[1]" 27;
+IO_LOC "codigo_gray_pi[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;     //gray[1]
+
+IO_LOC "codigo_gray_pi[0]" 28;
+IO_LOC "codigo_gray_pi[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;     //gray[0]
+
+
+
+
+IO_LOC "catodo_po[6]" 29;
+IO_LOC "catodo_po[6]" IO_TYPE=LVCMOS33; //Cathode[g]
+
+IO_LOC "catodo_po[5]" 30;
+IO_LOC "catodo_po[5]" IO_TYPE=LVCMOS33; //Cathode[f]
+
+IO_LOC "catodo_po[0]" 51;
+IO_LOC "catodo_po[0]" IO_TYPE=LVCMOS33; //Cathode[e]
+
+IO_LOC "catodo_po[1]" 42;
+IO_LOC "catodo_po[1]" IO_TYPE=LVCMOS33; //Cathode[d]
+
+IO_LOC "catodo_po[4]" 53;
+IO_LOC "catodo_po[4]" IO_TYPE=LVCMOS33; //Cathode[c]
+
+IO_LOC "catodo_po[3]" 54;
+IO_LOC "catodo_po[3]" IO_TYPE=LVCMOS33; //Cathode[b]
+
+IO_LOC "catodo_po[2]" 55;
+IO_LOC "catodo_po[2]" IO_TYPE=LVCMOS33; //Cathode[a]
+
+
+
+IO_LOC "anodo_po[1]" 57;
+IO_LOC "anodo_po[1]" IO_TYPE=LVCMOS33; //Anode_digit_1
+
+IO_LOC "anodo_po[0]" 56;
+IO_LOC "anodo_po[0]" IO_TYPE=LVCMOS33; //Anode_digit_0
+
+
+
+
+
+

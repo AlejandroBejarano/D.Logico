@@ -1,0 +1,142 @@
+Info: Series:GW1N-9C Device:GW1NR-9C Package:QFN88P Speed:C6/I5
+
+Info: Packing constants..
+Info: Packing Shadow RAM..
+Info: Packing GSR..
+Info: Packing IOs..
+Info: Packing diff IOs..
+Info: Packing IO logic..
+Info: Packing wide LUTs..
+Info: Packing LUT5s..
+Info: Packing LUT6s..
+Info: Packing LUT7s..
+Info: Packing LUT8s..
+Info: Packing ALUs..
+Info: Packing LUT-FFs..
+Info: Packing non-LUT FFs..
+Info: Packing PLLs..
+Info: Checksum: 0xc8e16b7f
+
+Info: Annotating ports with timing budgets for target frequency 27.00 MHz
+Info: Checksum: 0xc8e16b7f
+
+Info: Device utilisation:
+Info: 	                 VCC:     1/    1   100%
+Info: 	               SLICE:    11/ 8640     0%
+Info: 	                 IOB:    29/  274    10%
+Info: 	                ODDR:     0/  274     0%
+Info: 	           MUX2_LUT5:     0/ 4320     0%
+Info: 	           MUX2_LUT6:     0/ 2160     0%
+Info: 	           MUX2_LUT7:     0/ 1080     0%
+Info: 	           MUX2_LUT8:     0/ 1056     0%
+Info: 	                 GND:     1/    1   100%
+Info: 	                RAMW:     0/  270     0%
+Info: 	                 GSR:     1/    1   100%
+Info: 	                 OSC:     0/    1     0%
+Info: 	                rPLL:     0/    2     0%
+
+Info: Placed 18 cells based on constraints.
+Info: Creating initial analytic placement for 13 cells, random placement wirelen = 696.
+Info:     at initial placer iter 0, wirelen = 374
+Info:     at initial placer iter 1, wirelen = 374
+Info:     at initial placer iter 2, wirelen = 373
+Info:     at initial placer iter 3, wirelen = 374
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type SLICE: wirelen solved = 373, spread = 373, legal = 377; time = 0.00s
+Info:     at iteration #1, type VCC: wirelen solved = 377, spread = 377, legal = 377; time = 0.01s
+Info:     at iteration #1, type GSR: wirelen solved = 377, spread = 377, legal = 377; time = 0.00s
+Info:     at iteration #1, type ALL: wirelen solved = 373, spread = 373, legal = 381; time = 0.00s
+Info: HeAP Placer Time: 0.02s
+Info:   of which solving equations: 0.00s
+Info:   of which spreading cells: 0.01s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 0, wirelen = 381
+Info:   at iteration #5: temp = 0.000000, timing cost = 0, wirelen = 363
+Info:   at iteration #10: temp = 0.000000, timing cost = 0, wirelen = 335
+Info:   at iteration #13: temp = 0.000000, timing cost = 0, wirelen = 310 
+Info: SA placement time 0.01s
+
+Info: Max delay <async> -> <async>: 26.63 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 10406,  11638) |**** 
+Info: [ 11638,  12870) |** 
+Info: [ 12870,  14102) |**** 
+Info: [ 14102,  15334) |** 
+Info: [ 15334,  16566) |***** 
+Info: [ 16566,  17798) |******* 
+Info: [ 17798,  19030) |** 
+Info: [ 19030,  20262) |* 
+Info: [ 20262,  21494) |* 
+Info: [ 21494,  22726) |** 
+Info: [ 22726,  23958) |** 
+Info: [ 23958,  25190) | 
+Info: [ 25190,  26422) |** 
+Info: [ 26422,  27654) |* 
+Info: [ 27654,  28886) | 
+Info: [ 28886,  30118) |* 
+Info: [ 30118,  31350) |****** 
+Info: [ 31350,  32582) |**** 
+Info: [ 32582,  33814) |** 
+Info: [ 33814,  35046) |******** 
+Info: Checksum: 0xd9db47e1
+Info: Find global nets...
+Info: Routing globals...
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 57 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:         61 |        3         58 |    3    58 |         0|       0.08       0.08|
+Info: Routing complete.
+Info: Router1 time 0.08s
+Info: Checksum: 0x83688695
+
+Info: Critical path report for cross-domain path '<async>' -> '<async>':
+Info: curr total
+Info:  0.0  0.0  Source decodificador_decenas_inst.bd_IBUF_O$iob.O
+Info: 13.4 13.4    Net decodificador_decenas_inst.bd budget 37.037037 ns (1,0) -> (45,12)
+Info:                Sink decodificador_decenas_inst.ad_LUT1_F_LC.A
+Info:                Defined in:
+Info:                  ../design/module_decoder.sv:39.23-42.2
+Info:                  ../design/module_decoder.sv:105.25-105.27
+Info:  1.0 14.4  Source decodificador_decenas_inst.ad_LUT1_F_LC.F
+Info:  2.2 16.7    Net decodificador_decenas_inst.ad budget 18.003019 ns (45,12) -> (46,17)
+Info:                Sink dd_OBUF_O$iob.I
+Info:                Defined in:
+Info:                  ../design/module_decoder.sv:39.23-42.2
+Info:                  ../design/module_decoder.sv:105.41-105.43
+Info: 1.0 ns logic, 15.7 ns routing
+
+Info: Max delay <async> -> <async>: 16.69 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 20352,  21123) |** 
+Info: [ 21123,  21894) |*** 
+Info: [ 21894,  22665) |** 
+Info: [ 22665,  23436) |*** 
+Info: [ 23436,  24207) |***** 
+Info: [ 24207,  24978) |**** 
+Info: [ 24978,  25749) |**** 
+Info: [ 25749,  26520) |**** 
+Info: [ 26520,  27291) |* 
+Info: [ 27291,  28062) | 
+Info: [ 28062,  28833) |** 
+Info: [ 28833,  29604) |*** 
+Info: [ 29604,  30375) |* 
+Info: [ 30375,  31146) | 
+Info: [ 31146,  31917) |** 
+Info: [ 31917,  32688) |* 
+Info: [ 32688,  33459) |******* 
+Info: [ 33459,  34230) |** 
+Info: [ 34230,  35001) |***** 
+Info: [ 35001,  35772) |***** 
+
+Info: Program finished normally.
